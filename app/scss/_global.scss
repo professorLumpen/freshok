@@ -1,0 +1,22 @@
+body {
+  background-color: #FFFFFF;
+  color: $title-clr;
+  font-size: 16px;
+  line-height: 1.4;
+  @extend %opensans-400;
+}
+
+a {
+  color: #FFFFFF;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}

@@ -1,15 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ФРЕШОК онлайн-маркет</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
 
+<body>
+  <header class="header">
+    <nav class="header-top">
+      <div class="container">
+        <div class="header-top__inner">
+          <ul class="support">
+            <li class="support__item">
+              <a class="support__link support__link--address" href="#">
+                Адрес и время доставки
+              </a>
+            </li>
+            <li class="support__item">
+              <a class="support__link support__link--tel" href="#">
+                Горячая линия 24/7
+              </a>
+            </li>
+          </ul>
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Доставка</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">О нас</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Новости</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="header-bottom">
+      <div class="container">
+        <div class="header-bottom__inner">
+          <div class="logotype">
+            <img class="logo logo--header" src="images/logo.svg" alt="Логотип">
+            <h1 class="main-title">
+              Фрешок
+              <span class="main-subtitle">
+                Онлайн-маркет
+              </span>
+            </h1>
+          </div>          
+          <button class="catalog-btn" type="button">Каталог продуктов</button>
+          <form class="search">
+            <input class="search__input" type="text" name="search" placeholder="Найти в магазине ...">      
+            <button class="search__btn" type="submit">Поиск</button>
+          </form>
+          <ul class="user-icons">
+            <li class="user-icons__item">
+              <a class="user-icons__link user-icons__link--profile" href="#">
+              </a>
+            </li>
+            <li class="user-icons__item">
+              <a class="user-icons__link user-icons__link--heart" href="#">
+                <span>12</span>
+              </a>
+            </li>
+            <li class="user-icons__item">
+              <a class="user-icons__link user-icons__link--cart" href="#">
+                <span>12</span>
+              </a>
+            </li>
+          <ul/>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  
 
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
