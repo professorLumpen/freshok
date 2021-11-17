@@ -1,7 +1,9 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
+
 
 .header-top {
   background-color: $bg-clr;
@@ -191,12 +193,9 @@
     width: 100%;
     height: 50px;
     padding: 15px 18px 15px 50px;
-    border: none;
     box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.2);
-    border-radius: 6px 0 0 6px;
 
     &::placeholder {
-
       color: #31352B;
     }
   }
@@ -308,6 +307,140 @@
     z-index: 2;
   }
 } 
+
+.discounts {
+  &__inner {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 24px;
+  }
+
+  &__title,
+  &__subtitle {
+    @extend %ruda-900;
+    font-size: 60px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    max-width: 862px;
+  }
+
+  &__text {
+    margin-bottom: 42px;
+    
+    &--headings {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__subtitle {
+    color: #CF3E3B;
+    margin-bottom: 10px;
+  }
+}
+
+
+.slider {
+  position: relative;
+  z-index: 1;
+  
+  &__item {    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 100vh;
+    padding: 142px 0;
+    height: 600px;
+  }
+
+  .slick-arrow {
+    font-size: 0;
+    border: none;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 18.7px;
+      height: 32px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url(../images/icons/slider-arrow.svg);     
+    }
+  }
+
+  .slick-next {
+    right: 60px;
+    
+    &::after {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }    
+  }
+
+  .slick-prev {
+    left: 60px;
+  }
+}
+
+.benefits {
+  padding: 50px 0 30px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    max-width: 274px;
+    width: 100%;
+    padding-left: 74px;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 65px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50px;
+      height: 50px;
+    }
+
+    &--delivery::after {
+      background-image: url(../images/benefits/delivery.svg);
+    }
+
+    &--return::after {
+      background-image: url(../images/benefits/return.svg);
+    }
+
+    &--support::after {
+      background-image: url(../images/benefits/support.svg);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    color: $title-clr;
+    margin-bottom: 5px;
+  }
+
+  &__descr {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+  }
+}
+
 
 
 

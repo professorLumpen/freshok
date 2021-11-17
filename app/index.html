@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ФРЕШОК онлайн-маркет</title>
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
+  
 </head>
 
 <body>
@@ -51,10 +53,10 @@
                 Онлайн-маркет
               </span>
             </h1>
-          </div>          
+          </div>
           <button class="catalog-btn" type="button">Каталог продуктов</button>
           <form class="search">
-            <input class="search__input" type="text" name="search" placeholder="Найти в магазине ...">      
+            <input class="search__input input" type="text" name="search" placeholder="Найти в магазине ...">
             <button class="search__btn" type="submit">Поиск</button>
           </form>
           <ul class="user-icons">
@@ -72,13 +74,112 @@
                 <span>12</span>
               </a>
             </li>
-          <ul/>
+            <ul />
         </div>
-
       </div>
     </nav>
   </header>
+
+  <main class="main">
+    <section class="discounts">
+      <ul class="slider">
+        <li class="slider__item" style="background-image: url(images/slider/fresh.jpg);">
+          <div class="container">
+            <div class="discounts__inner">
+              <div class="discounts__text">
+                <h2 class="discounts__title">
+                  СВЕЖАЧОК ВАМ в ХАТУ
+                  <span class="discounts__subtitle">
+                    Скидка -50%
+                  </span>
+                </h2>
+                <p class="discounts__descr">
+                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+                </p>
+              </div>
+              <a class="button discounts__btn" href="#">
+                Купить сейчас
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="slider__item" style="background-image: url(images/slider/tomato.jpg);">
+          <div class="container">
+            <div class="discounts__inner">
+              <div class="discounts__text">
+                <h2 class="discounts__title">
+                  НАКРУТИ СЕБЕ ТОМАТОВ
+                  <span class="discounts__subtitle">
+                    АКЦИЯ: 3 кг по цене 1
+                  </span>
+                </h2>
+                <p class="discounts__descr">
+                  Только с 12 по 15 июля скидка на домашние помидорчики
+                </p>
+              </div>
+              <a class="button discounts__btn" href="#">
+                Купить сейчас
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="slider__item" style="background-image: url(images/slider/greens.jpg);">
+          <div class="container">
+            <div class="discounts__inner">
+              <div class="discounts__text discounts__text--headings">
+                <h2 class="discounts__title">
+                  Пусть остальные
+                  позеленеют от зависти
+                  <span class="discounts__subtitle">
+                    Распродажа зелени
+                  </span>
+                </h2>
+              </div>
+              <a class="button discounts__btn" href="#">
+                Купить сейчас
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <div class="benefits section">
+      <div class="container">
+        <ul class="benefits__list">
+          <li class="benefits__item benefits__item--delivery">
+            <h3 class="benefits__title">
+              Бесплатная доставка
+            </h3>
+            <p class="benefits__descr">
+              Для заказов на сумму от 500 ₽
+            </p>
+          </li>
+          <li class="benefits__item benefits__item--return">
+            <h3 class="benefits__title">
+              Возврат товара
+            </h3>
+            <p class="benefits__descr">
+              Если товары были испорчены
+            </p>
+          </li>
+          <li class="benefits__item benefits__item--support">
+            <h3 class="benefits__title">
+              Поддержка 24/7
+            </h3>
+            <p class="benefits__descr">
+              Лучшие операторы
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+  </main>
+
   
+
 
   <script src="js/main.min.js"></script>
 </body>

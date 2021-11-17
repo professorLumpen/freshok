@@ -3,6 +3,7 @@ $accent-clr: #505050;
 $title-clr: #121212;
 $theme-clr: #63A60E;
 $alarm-clr: #CF3E3B;
+$section-clr: #F6F6F6;
 
 %opensans-300 {
   font-family: 'OpenSans-Light', sans-serif;
@@ -37,4 +38,9 @@ $alarm-clr: #CF3E3B;
 %ruda-700 {
   font-family: 'Ruda-Bold', sans-serif;
   font-weight: 700;
+}
+
+%ruda-900 {
+  font-family: 'Ruda-Black', sans-serif;
+  font-weight: 900;
 }

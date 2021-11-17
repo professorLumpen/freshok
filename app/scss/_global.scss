@@ -1,9 +1,20 @@
+html, 
+body {
+  height: 100%;
+}
+
 body {
   background-color: #FFFFFF;
-  color: $title-clr;
+  color: $accent-clr;
   font-size: 16px;
   line-height: 1.4;
   @extend %opensans-400;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 a {
@@ -19,4 +30,23 @@ button {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.input {
+  border: none;
+  border-radius: 6px 0 0 6px;
+  margin: 0;
+}
+
+.button {
+  padding: 12px 24px;
+  background-color: $theme-clr;
+  color: #FFFFFF;
+  border: none;
+  margin: 0;
+  border-radius: 6px;
+}
+ 
+.section {
+  background-color: $section-clr;
 }
