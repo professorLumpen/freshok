@@ -9,6 +9,7 @@ body {
   font-size: 16px;
   line-height: 1.4;
   @extend %opensans-400;
+  letter-spacing: 0.03em;
   display: flex;
   flex-direction: column;
 }
@@ -23,6 +24,9 @@ a {
 
 button {
   cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 .container {
@@ -39,7 +43,8 @@ button {
 }
 
 .button {
-  padding: 12px 24px;
+  padding: 11px 23px;
+  border: 1px solid $theme-clr;
   background-color: $theme-clr;
   color: #FFFFFF;
   border: none;
@@ -49,4 +54,11 @@ button {
  
 .section {
   background-color: $section-clr;
+}
+.title {
+  @extend %opensans-600;
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $title-clr;
 }
