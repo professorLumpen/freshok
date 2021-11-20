@@ -989,7 +989,7 @@
   .partners {
     display: flex;
 
-    &__img:not(:last-child) {
+    &__item:not(:last-child) {
       margin-right: 24px;
     }
   }
