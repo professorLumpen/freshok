@@ -28,17 +28,16 @@
   &__item {
     max-width: 130px;
     width: 100%;
+    padding: 3px 0;
 
     &--last {
       max-width: 220px;
     }
 
     &:not(:last-child) {
-      margin-bottom: 18px;
+      margin-bottom: 12px;
     }
   }
-
-    
 
   .logotype {
     margin-bottom: 30px;
@@ -47,6 +46,7 @@
   .notifications {
     max-width: 303px;
     width: 100%;
+    margin-right: 70px;
 
     &__descr {
       color: $white;
@@ -64,8 +64,7 @@
     }
 
     &__input {
-      max-width: 181px;
-      width: 100%;
+      width: 181px;
       height: 40px;
       padding: 12px;
 
@@ -113,6 +112,14 @@
       margin-right: 24px;
     }
   }
+}
+
+ul.footer__list {
+  margin: -3px 4px 0 0;
+}
+
+ul.footer__nav-list {
+  margin: -3px 0 0 5px;
 }
 
 .social {

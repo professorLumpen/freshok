@@ -1,0 +1,10 @@
+.brands { 
+  &__inner {
+    padding: 0 55px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}

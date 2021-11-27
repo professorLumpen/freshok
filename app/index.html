@@ -19,25 +19,25 @@
         <div class="header-top__inner">
           <ul class="support">
             <li class="support__item">
-              <a class="support__link support__link--address header-top__link" href="#">
+              <a class="support__link support__link--address nav-link" href="#">
                 Адрес и время доставки
               </a>
             </li>
             <li class="support__item">
-              <a class="support__link support__link--tel header-top__link" href="#">
+              <a class="support__link support__link--tel nav-link" href="#">
                 Горячая линия 24/7
               </a>
             </li>
           </ul>
           <ul class="menu">
             <li class="menu__item">
-              <a class="menu__link header-top__link" href="#">Доставка</a>
+              <a class="menu__link nav-link" href="#">Доставка</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link header-top__link" href="#">О нас</a>
+              <a class="menu__link nav-link" href="#">О нас</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link header-top__link" href="#">Новости</a>
+              <a class="menu__link nav-link" href="#">Новости</a>
             </li>
           </ul>
         </div>
@@ -435,8 +435,7 @@
                   </a>
                 </div>
                 <h3 class="products-card__title">
-                  Напиток сокосодержащий Sanpellegrino Aranciata Orange <span class="products-card__max-str">Красный
-                    апельсин безалкогольный</span>
+                  Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный
                 </h3>
                 <span class="products-card__price products-card__price--past">299 <span class="rouble">₽</span></span>
                 <span class="products-card__price">199 <span class="rouble">₽</span></span>
@@ -788,7 +787,7 @@
                 <h3 class="products-card__title">
                   Лосось, 1 кг
                 </h3>
-                <span class="products-card__price products-card__price--past hidden">1199 <span
+                <span class="products-card__price products-card__price--past">1199 <span
                     class="rouble">₽</span></span>
                 <span class="products-card__price">999 <span class="rouble">₽</span></span>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
@@ -921,6 +920,89 @@
       </div>
     </section>
 
+    <section class="brands section">
+      <h2 class="sr-only">Бренды</h2>
+      <div class="container">
+        <div class="brands__inner">
+          <ul class="brands__list">
+            <li class="brands__item">
+              <img class="brands__img" src="images/brands/sprite.svg" alt="Фото бренда" width="80" height="60">
+            </li>
+            <li class="brands__item">
+              <img class="brands__img" src="images/brands/dr-pepper.svg" alt="Фото бренда" width="80" height="60">
+            </li>
+            <li class="brands__item">
+              <img class="brands__img" src="images/brands/cocacola.svg" alt="Фото бренда" width="80" height="60">
+            </li>
+            <li class="brands__item">
+              <img class="brands__img" src="images/brands/pepsi.svg" alt="Фото бренда" width="80" height="60">
+            </li>
+            <li class="brands__item">
+              <img class="brands__img" src="images/brands/redbull.svg" alt="Фото бренда" width="80" height="60">
+            </li>
+            <li class="brands__item">
+              <img class="brands__img" src="images/brands/fanta.svg" alt="Фото бренда" width="80" height="60">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="container">
+        <div class="news__inner">
+          <div class="news__heading">
+            <h2 class="title">
+              НАШИ НОВОСТИ
+            </h2>
+            <a class="news__all-link" href="#">
+              ВСе НОВОСТИ
+            </a>
+          </div>
+          <ul class="news__content">
+            <li class="news__item">
+              <div class="news__image" style="background-image: url(images/news/1.jpg);">
+                <p class="news__date">
+                  ИюЛЬ
+                  <span class="news__date-number">
+                    15
+                  </span>
+                </p>
+              </div>
+              <a  class="news__link" href="#">
+                Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!
+              </a>
+            </li>
+            <li class="news__item">
+              <div class="news__image" style="background-image: url(images/news/2.jpg);">
+                <p class="news__date">
+                  МАЙ
+                  <span class="news__date-number">
+                    07
+                  </span>
+                </p>
+              </div>
+              <a class="news__link" href="#">
+                Шикарнейший выбор манго в нашем онлайн-маркете
+              </a>
+            </li>
+            <li class="news__item">
+              <div class="news__image" style="background-image: url(images/news/3.jpg);">
+                <p class="news__date">
+                  Февраль
+                  <span class="news__date-number">
+                    20
+                  </span>
+                </p>
+              </div>
+              <a class="news__link" href="#">
+                Всё, что вы хотели знать о папайя
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
 
@@ -941,7 +1023,7 @@
         </div>
         <div class="footer__nav">
           <form class="notifications" action="#">
-            <label class="notifications__descr" for="email">Следите за нашими акциями</label>
+            <span class="notifications__descr" for="email">Следите за нашими акциями</span>
             <div class="notifications__inner">
               <input class="notifications__input input" id="email" type="email" name="email"
                 placeholder="email@email.com" required>
@@ -950,55 +1032,55 @@
           </form>
           <ul class="footer__nav-list">
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link nav-link" href="#">
                 О нас
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link nav-link" href="#">
                 Контакты
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link nav-link" href="#">
                 Публичная оферта
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link nav-link" href="#">
                 Оплата и доставка
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link nav-link" href="#">
                 Вакансии
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link nav-link" href="#">
                 Акции
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link nav-link" href="#">
                 Отзывы
               </a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="#">
+              <a class="footer__link nav-link" href="#">
                 Новости
               </a>
             </li>
           </ul>
           <ul class="footer__list">
             <li class="footer__item footer__item--last">
-              <a class="footer__link" href="tel:+7907288365">
+              <a class="footer__link nav-link" href="tel:+7907288365">
                 Горячая линия
                 +7 907 288 365
               </a>
             </li>
             <li class="footer__item footer__item--last">
-              <a class="footer__link" href="#">
+              <a class="footer__link nav-link" href="#">
                 Санкт-Петербург, ул. Ленина, 1
               </a>
             </li>
@@ -1073,7 +1155,6 @@
         </div>
       </nav>
     </div>
-    <div class="hr"></div>
     <div class="footer__wrapper">
       <div class="container">
         <div class="footer__bottom">

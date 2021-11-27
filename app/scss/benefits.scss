@@ -8,13 +8,13 @@
   }
 
   &__item {
-    max-width: 274px;
+    max-width: 262px;
     width: 100%;
     padding-left: 74px;
     position: relative;
 
     &:not(:last-child) {
-      margin-right: 55px;
+      margin-right: 67px;
     }
 
     &::after {
@@ -48,6 +48,6 @@
 
   &__descr {
     font-size: 14px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0;
   }
 }
