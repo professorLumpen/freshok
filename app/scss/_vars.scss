@@ -1,10 +1,20 @@
-$bg-clr: #31352B;
-$accent-clr: #505050;
-$title-clr: #121212;
-$theme-clr: #63A60E;
-$alarm-clr: #CF3E3B;
-$section-clr: #F6F6F6;
-$default-clr: #E0EDCF;
+$dark-900: #121212;
+$dark-800: #31352B;
+$dark-500: #505050;
+$dark-400: #4F4F4F;
+$green-900: #63A60F;
+$green-800: #63A60E;
+$green-700: #4D800C;
+$green-200: #E0EDCF;
+$green-100: #EFF6E7;
+$red-900: #CF3E3B;
+$orange-900: #FF7A00;
+$yellow-900: #FFB800;
+$silver-600: #C1C1C1;
+$silver-200: #F2F2F2;
+$silver-100: #F6F6F6;
+$white: #FFFFFF;
+
 
 
 %opensans-300 {
@@ -45,4 +55,12 @@ $default-clr: #E0EDCF;
 %ruda-900 {
   font-family: 'Ruda-Black', sans-serif;
   font-weight: 900;
+}
+
+
+%translate-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

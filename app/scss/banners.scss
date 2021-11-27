@@ -1,0 +1,73 @@
+.banners {
+  padding-bottom: 72px;
+
+  &__inner {
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 2fr 0.95fr 0.95fr;
+    grid-gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 35px;
+    max-height: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+
+    &--light {
+      color: $white;
+    }
+  }
+
+  &__text {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__category {
+    @extend %opensans-700;
+    font-size: 12px;
+    line-height: 1;
+    margin-bottom: 18px;
+    letter-spacing: 0.1em;
+
+    &--light {
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__subtitle {
+    @extend %ruda-600;
+    font-size: 30px;
+    margin-bottom: 16px;
+    letter-spacing: 0;
+
+    &--light {
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__link {
+    @extend %opensans-700;
+    font-size: 14px;
+    line-height: 1;
+    color: $dark-500;
+    border-bottom: 2px solid $dark-500;
+    padding-bottom: 6px;
+    max-width: max-content;
+    letter-spacing: 0;
+    
+    &--light {
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+      color: $white;
+      border-color: $white;
+    }
+  }
+}

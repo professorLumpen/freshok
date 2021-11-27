@@ -1,0 +1,355 @@
+.header-top {
+  background-color: $dark-800;
+  padding: 17px 0 15px;
+  color: $white;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    transition: color 0.5s,
+                opacity 0.5s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      color: $green-200;
+    }
+
+    &:focus {
+      background: rgba(255, 255, 255, 0.0001);
+      box-shadow: 0px 0px 0px 3px $green-100;
+      border-radius: 3px;
+    }
+  }
+}
+
+.support, .menu {
+  display: flex;
+  justify-content: space-between;
+  @extend %opensans-700;
+  font-size: 13px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.support {
+  &__item {
+    position: relative;
+    padding-left: 44px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 38px;
+  }
+
+  &__link {
+    position: relative;
+  }
+
+  &__link::before {
+    content: "";
+    position: absolute;    
+    top: -4px;
+    height: 22px;
+  }
+
+  &__link--address::before {
+    width: 32px;
+    left: -44px;
+    background-image: url(../images/icons/address.svg);
+  }
+
+  &__link--tel::before {
+    width: 22px;
+    left: -34px;
+    background-image: url(../images/icons/tel.svg);
+  }
+
+}
+
+.menu {
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.header-bottom {
+  background-color: $green-900;
+  padding: 25px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logotype {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    outline: none;
+     &:focus {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      box-shadow: inset 0px 0px 0px 3px $green-100;
+    }
+  }
+}
+
+.logo {
+  
+  transition: background-color 0.5s, 
+              opacity 0.5s;
+              
+  &:hover,
+  &:focus, 
+  &:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+
+  &:focus {
+    box-shadow: inset 0px 0px 0px 3px $green-100;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.logo--title {
+  margin-right: 13px;
+}
+
+.main-title {
+  position: relative;
+
+  max-width: 128px;
+
+  @extend %ruda-600;
+  text-align: center;
+  text-transform: uppercase;
+
+  font-size: 28px;
+  line-height: 1.2;
+  color: $white;
+  margin-bottom: 12px;
+}
+
+.main-subtitle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 34px;
+
+  font-size: 12px;
+}
+
+.catalog-btn {
+  @extend %opensans-600;
+
+  position: relative;
+
+  max-width: 240px;
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  border: none;
+  background-color: $white;
+  color: $green-800;
+  padding-left: 25px;
+  margin-right: -10px;
+
+  transition: background-color 0.7s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;    
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &::before {
+    top: 16px;
+    left: 18px;
+    width: 25px;
+    height: 18px;
+    background-image: url(../images/icons/nav.svg);
+  }
+
+  &::after {
+    top: 23px;
+    right: 19px;
+    width: 8px;
+    height: 4px;
+    background-image: url(../images/icons/arrow-down.svg);
+    transition: transform 0.5s;
+  }
+
+  &:hover {
+    background-color: $green-200;
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.search {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 576px;
+  font-size: 14px;
+  line-height: 1.4;
+
+  &__input {
+    width: 100%;
+    height: 50px;
+    padding: 15px 18px 15px 50px;
+    box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.2);
+    outline: none;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px $green-200;     
+    }
+
+    &::placeholder {
+      color: $dark-800;
+    }
+  }
+
+  &__btn {
+    padding: 0;
+    border: none;
+    max-width: 158px;
+    width: 100%;
+    border-radius: 0 6px 6px 0;
+    background-color: $dark-800;
+    color: $white;
+    text-transform: uppercase;
+    outline: none;
+    transition: background-color 0.7s,
+                box-shadow 0.7s,
+                opacity 0.7s;
+
+    &:hover {
+      background-color: rgba(49, 53, 43, 0.85);
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__btn::before {
+    content: "";
+    position: absolute;    
+    top: 16px;
+    left: 13px;
+    width: 21px;
+    height: 20px;
+    background-image: url(../images/icons/search.svg);
+    background-repeat: no-repeat;
+    transition: background-color 0.5s,
+                opacity 0.5s;
+  }
+
+  &__btn:hover::before,
+  &__btn:focus::before {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+    }
+
+  &__btn:active::before {
+    opacity: 0.5;
+  }
+
+}
+
+.user-icons {
+  display: flex;
+  max-width: 172px;
+
+  &__item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__link {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    outline: none;
+    transition: background-color 0.5s, 
+                opacity 0.5s;
+
+    &:hover,
+    &:focus, 
+    &:active {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+    }
+
+    &:focus {
+      box-shadow: inset 0px 0px 0px 3px $green-100;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+
+    &::after {
+      content: "";
+      @extend %translate-center; 
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 32px;
+    }
+
+    &--profile::after {
+      width: 25px;
+      background-image: url(../images/icons/profile.svg);
+    }
+
+    &--heart::after {
+      width: 36px;
+      background-image: url(../images/icons/heart.svg);
+    }
+
+    &--cart::after {
+      width: 34px;
+      background-image: url(../images/icons/cart.svg);
+    }
+  }
+
+  &__link span {
+    @extend %opensans-600;
+    font-size: 10px;
+    color: $red-900;
+    background-color: $white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 1.8;
+    z-index: 2;
+  }
+}

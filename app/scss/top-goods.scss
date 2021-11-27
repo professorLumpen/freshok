@@ -1,0 +1,16 @@
+.top-goods {
+
+  &__inner {
+    // padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 27px;
+  }
+
+}
+
+@import 'products';

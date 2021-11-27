@@ -4,29 +4,20 @@ body {
 }
 
 body {
-  background-color: #FFFFFF;
-  color: $accent-clr;
+  @extend %opensans-400;
   font-size: 16px;
   line-height: 1.4;
-  @extend %opensans-400;
   letter-spacing: 0.03em;
+
+  background-color: $white;
+  color: $dark-500;
+
   display: flex;
   flex-direction: column;
 }
 
 .main {
   flex-grow: 1;
-}
-
-a {
-  color: #FFFFFF;
-}
-
-button {
-  cursor: pointer;
-  padding: 0;
-  border: none;
-  background-color: transparent;
 }
 
 .container {
@@ -47,35 +38,59 @@ button {
   max-width: max-content;
   font-size: 18px;
   padding: 11px 23px;
-  border: 1px solid $theme-clr;
-  background-color: $theme-clr;
-  color: #FFFFFF;
+  border: 1px solid $green-800;
+  background-color: $green-800;
+  color: $white;
   border: none;
   margin: 0;
   border-radius: 6px;
   letter-spacing: 0.03em;
   outline: none;
-  transition: background-color,
-              box-shadow,
-              opacity,
-              0.7s;
+  transition: background-color 0.7s,
+              box-shadow 0.7s,
+              opacity 0.7s;
 
   &:hover {
-    background-color: #4D800C;
+    background-color: $green-700;
   }
 
   &:focus {
-    box-shadow: 0px 0px 0px 4px #E0EDCF;
+    box-shadow: 0px 0px 0px 4px $green-200;
   }
 
   &:active {
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: rgba(255, 255, 255, 0.5);
   }
+
+  &--white {
+    background-color: $white;
+    margin: 0 auto;
+    color: $green-800;
+    text-align: center;
+    border: 1px solid $green-800;
+
+    &:hover {
+      background-color: $green-100;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.5);
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      color: rgba(99, 166, 14, 0.5);
+    }
+  }
 }
  
 .section {
-  background-color: $section-clr;
+  padding: 72px 0;
+
+  &--gray{
+    background-color: $silver-100;
+  } 
 }
 
 .title {
@@ -84,7 +99,7 @@ button {
   font-size: 32px;
   text-align: center;
   text-transform: uppercase;
-  color: $title-clr;
+  color: $dark-900;
 }
 
 .sr-only {
@@ -100,9 +115,6 @@ button {
     overflow: hidden;
 }
 
-.hr {
-  width: 100%;
-  height: 1px;
-  background-color: #FFFFFF;
-  opacity: 0.1;
+.hidden {
+  display: none;
 }
