@@ -118,6 +118,11 @@
 
     &__link {
       outline: none;
+
+      &:focus,
+      &:active {
+        border: 1px solid $green-800;
+      }
     }
 
     &__shadow {
@@ -210,10 +215,14 @@
       position: absolute;
       left: 21px;
       bottom: 18px;
+      padding: 0 20px 0 0;
 
       &--past {
-        bottom: 35px;
+        position: absolute;
+        bottom: 17px;
         color: $silver-600;
+        width: max-content;
+        transform: translateX(-90%);
 
         &::after {
           content: "";
@@ -323,9 +332,9 @@
         
         &--past {
           @extend %opensans-400;
-          left: 61%;
+          right: -60px;
+          bottom: 2px;
           font-size: 12px;
-          bottom: 11px;
 
           .rouble {
             font-size: inherit;

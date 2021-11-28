@@ -76,5 +76,16 @@
     line-height: 1.5;
     display: block;
     letter-spacing: 0;
+    transition: color 0.5s;
+    outline: none;
+
+    &:hover {
+      color: $green-800;
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid $green-800;
+    }
   }
 }

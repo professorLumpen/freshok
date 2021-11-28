@@ -4,6 +4,7 @@ $(function(){
     infinite: false
   });
 
-  var mixer = mixitup('.products');
+  var mixer = mixitup('.products--top');
+  var mixer = mixitup('.products--promo');
 
 });
