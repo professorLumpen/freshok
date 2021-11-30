@@ -57,7 +57,73 @@
               </span>
             </h1>
           </div>
-          <button class="catalog-btn" type="button">Каталог продуктов</button>
+          <div class="catalog">
+            <button class="catalog__btn" type="button">Каталог продуктов</button>
+            <div class="catalog__inner">
+              <ul class="catalog__list">
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Овощи и фрукты
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Бакалея
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Молочные продукты
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Хлеб
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Мясо
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Колбаса
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Рыба
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Алкоголь
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Напитки
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Торты
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Мясо
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    Чай, кофе
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <form class="search">
             <input class="search__input input" type="text" name="search" placeholder="Найти в магазине ..." required>
             <button class="search__btn" type="submit">Поиск</button>
@@ -73,11 +139,153 @@
               </a>
             </li>
             <li class="user-icons__item">
-              <a class="user-icons__link user-icons__link--cart" href="#" aria-label="Корзина">
+              <button class="user-icons__link user-icons__link--cart" type="button" aria-label="Корзина">
                 <span>12</span>
-              </a>
+              </button>
             </li>
           </ul>
+        </div>
+      </div>
+      <div class="shopping-cart">
+        <div class="shopping-cart__nav">
+          <h3 class="shopping-cart__heading">
+            Корзина
+          </h3>
+          <button class="shopping-cart__clean state-btn" type="reset">
+            очистить корзину
+          </button>
+          <button class="shopping-cart__close state-btn" type="button" aria-label="Закрыть корзину"></button>
+        </div>
+        <ul class="shopping-cart__list">
+          <li class="shopping-cart__item">
+            <article class="products-card products-card--cart mix fruits">
+              <span class="stock stock--in-stock hidden">В наличии</span>
+              <span class="stock stock--ends hidden">Заканчивается</span>
+              <span class="stock stock--out-stock hidden">Нет в наличии</span>
+              <span class="badge badge--new">Новинка</span>
+              <span class="badge badge--discount badge--second">-50%</span>
+              <span class="badge badge--hit hidden">Хит</span>
+              <button class="products-card__heart" type="button">
+                <svg width="32" height="29">
+                  <path
+                    d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                    fill="#C1C1C1" />
+                </svg>
+              </button>
+              <div class="products-card__img-container">
+                <a class="products-card__link" href="#">
+                  <div class="products-card__shadow">
+                    <div class="products-card__search">
+                      <svg width="20" height="20">
+                        <path
+                          d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
+                          fill="#63A60E" />
+                      </svg>
+                    </div>
+                    <img class="products-card__image" src="images/content/cart/pineapple.jpg" alt="Карточка товара" width="60"
+                      height="60">
+                  </div>
+                </a>
+              </div>
+              <div class="products-card__text">
+                <h3 class="products-card__title">
+                  Ананас, 1кг
+                </h3>
+                <div class="products-card__prices">
+                  <span class="products-card__price">
+                    999 <span class="rouble">₽</span>
+                  </span>
+                  <span class="products-card__price--past">
+                    1999 <span class="rouble">₽</span>
+                  </span>
+                </div>
+              </div>
+              <button type="button" class="products-card__cart" aria-label="Корзина"></button>
+              <span class="products__raiting hidden"></span>
+              <div class="shopping-cart__controls">
+                <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                <span class="shopping-cart__number">
+                  2
+                </span>
+                <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                <span class="shopping-cart__sum products-card__price">
+                  1998 <span class="rouble">₽</span>
+                </span>
+              </div>
+              <button class="shopping-cart__remove state-btn" type="button" aria-label="Удалить товар"></button>
+            </article>
+          </li>
+          <li class="shopping-cart__item">
+            <article class="products-card products-card--cart mix fruits">
+              <span class="stock stock--in-stock hidden">В наличии</span>
+              <span class="stock stock--ends hidden">Заканчивается</span>
+              <span class="stock stock--out-stock hidden">Нет в наличии</span>
+              <span class="badge badge--new hidden">Новинка</span>
+              <span class="badge badge--discount hidden">-50%</span>
+              <span class="badge badge--hit">Хит</span>
+              <button class="products-card__heart" type="button">
+                <svg width="32" height="29">
+                  <path
+                    d="M29.6653 2.77712C28.0869 0.98625 25.8974 0 23.5 0C20.1283 0 17.9936 2.01375 16.7966 3.70312C16.486 4.1415 16.2218 4.58106 16 4.99469C15.7782 4.58106 15.5141 4.1415 15.2034 3.70312C14.0064 2.01375 11.8717 0 8.5 0C6.10262 0 3.91306 0.986313 2.33469 2.77719C0.829188 4.48556 0 6.77356 0 9.21969C0 11.8824 1.03956 14.3589 3.27156 17.0134C5.26638 19.3859 8.13619 21.8314 11.4594 24.6632C12.6977 25.7185 13.9782 26.8098 15.3416 28.0026L15.3825 28.0384C15.5592 28.1932 15.7796 28.2705 16 28.2705C16.2204 28.2705 16.4408 28.1931 16.6175 28.0384L16.6584 28.0026C18.0217 26.8098 19.3023 25.7186 20.5408 24.6631C23.8638 21.8315 26.7336 19.386 28.7284 17.0134C30.9604 14.3589 32 11.8824 32 9.21969C32 6.77356 31.1708 4.48556 29.6653 2.77712ZM19.3246 23.2361C18.2571 24.1458 17.1584 25.0819 16 26.089C14.8416 25.0821 13.7429 24.1458 12.6753 23.236C6.17156 17.6939 1.875 14.0326 1.875 9.21969C1.875 7.23031 2.53781 5.38256 3.74137 4.01688C4.95875 2.63569 6.64869 1.875 8.5 1.875C11.0706 1.875 12.7323 3.45863 13.6735 4.78713C14.5178 5.97863 14.9584 7.17975 15.1086 7.64081C15.2343 8.02675 15.5941 8.28794 16 8.28794C16.4059 8.28794 16.7657 8.02675 16.8914 7.64081C17.0416 7.17975 17.4822 5.97863 18.3265 4.78706C19.2677 3.45863 20.9294 1.875 23.5 1.875C25.3513 1.875 27.0413 2.63569 28.2586 4.01688C29.4622 5.38256 30.125 7.23031 30.125 9.21969C30.125 14.0326 25.8284 17.6939 19.3246 23.2361Z"
+                    fill="#C1C1C1" />
+                </svg>
+              </button>
+              <div class="products-card__img-container">
+                <a class="products-card__link" href="#">
+                  <div class="products-card__shadow">
+                    <div class="products-card__search">
+                      <svg width="20" height="20">
+                        <path
+                          d="M8.24218 16.4718C3.69742 16.4718 0 12.7772 0 8.23588C0 3.69459 3.69742 0 8.24218 0C12.7869 0 16.4844 3.69459 16.4844 8.23588C16.4844 12.7772 12.7869 16.4718 8.24218 16.4718ZM8.24218 1.5613C4.55898 1.5613 1.5625 4.5555 1.5625 8.23588C1.5625 11.9163 4.55898 14.9105 8.24218 14.9105C11.9254 14.9105 14.9219 11.9163 14.9219 8.23588C14.9219 4.5555 11.9254 1.5613 8.24218 1.5613ZM19.7712 19.7713C20.0763 19.4665 20.0763 18.9722 19.7712 18.6673L16.2751 15.1739C15.97 14.869 15.4753 14.869 15.1702 15.1739C14.8651 15.4788 14.8651 15.9731 15.1702 16.2779L18.6663 19.7713C18.8188 19.9238 19.0188 20 19.2188 20C19.4187 20 19.6186 19.9238 19.7712 19.7713Z"
+                          fill="#63A60E" />
+                      </svg>
+                    </div>
+                    <img class="products-card__image" src="images/content/cart/dragonfruit.jpg" alt="Карточка товара" width="60"
+                      height="60">
+                  </div>
+                </a>
+              </div>
+              <div class="products-card__text">
+                <h3 class="products-card__title">
+                  Питахайя красная с белой мякотью, 1шт
+                </h3>
+                <div class="products-card__prices">
+                  <span class="products-card__price">
+                    1019 <span class="rouble">₽</span>
+                  </span>
+                  <span class="products-card__price--past hidden">
+                    1999 <span class="rouble">₽</span>
+                  </span>
+                </div>
+              </div>
+              <button type="button" class="products-card__cart" aria-label="Корзина"></button>
+              <span class="products__raiting hidden"></span>
+              <div class="shopping-cart__controls">
+                <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                <span class="shopping-cart__number">
+                  2
+                </span>
+                <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                <span class="shopping-cart__sum products-card__price">
+                  2038 <span class="rouble">₽</span>
+                </span>
+              </div>
+              <button class="shopping-cart__remove state-btn" type="button" aria-label="Удалить товар"></button>
+            </article>
+          </li>
+        </ul>
+        <div class="shopping-cart__bottom">
+          <div class="shopping-cart__total">
+            <p class="shopping-cart__heading shopping-cart__text">
+              Товаров на сумму
+            </p>
+            <span class="shopping-cart__price">
+              2038 <span class="rouble">₽</span>
+            </span>
+          </div>
+          <button class="shopping-cart__btn button">
+            Оформить заказ
+          </button>
         </div>
       </div>
     </nav>
@@ -228,7 +436,7 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/pineapple.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/standart/pineapple.jpg" alt="Карточка товара"
                         width="300" height="225">
                     </div>
                   </a>
@@ -237,16 +445,28 @@
                   <h3 class="products-card__title">
                     Ананас, 1кг
                   </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      999 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past">
+                      1999 <span class="rouble">₽</span>
+                    </span>
+                  </div>
                 </div>
-                <span class="products-card__price">
-                  999 <span class="rouble">₽</span>
-                  <span class="products-card__price--past">
-                    1999 <span class="rouble">₽</span>
-                  </span>
-                </span>
-                </a>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting hidden"></span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -274,22 +494,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/lemon.jpg" alt="Карточка товара" width="300"
+                      <img class="products-card__image" src="images/content/standart/lemon.jpg" alt="Карточка товара" width="300"
                         height="225">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Лимон, 1кг
-                </h3>
-                <span class="products-card__price">
-                  199 <span class="rouble">₽</span>
-                  <span class="products-card__price--past hidden">
-                    1999 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Лимон, 1кг
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      199 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past unvisible">
+                      1999 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting hidden"></span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -317,22 +552,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/dragonfruit.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/standart/dragonfruit.jpg" alt="Карточка товара"
                         width="300" height="225">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Питахайя красная с белой мякотью, 1шт
-                </h3>
-                <span class="products-card__price">
-                  1019 <span class="rouble">₽</span>
-                  <span class="products-card__price--past hidden">
-                    1999 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Питахайя красная с белой мякотью, 1шт
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      1019 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past unvisible">
+                      1999 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting hidden"></span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -360,22 +610,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/ketchup.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/standart/ketchup.jpg" alt="Карточка товара"
                         width="300" height="225">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
-                </h3>
-                <span class="products-card__price">
-                  600 <span class="rouble">₽</span>
-                  <span class="products-card__price--past hidden">
-                    1999 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      600 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past unvisible">
+                      1999 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting hidden"></span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -403,22 +668,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/carrot.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/standart/carrot.jpg" alt="Карточка товара"
                         width="300" height="225">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Морковь молодая с бабушкиной грядки, 1кг
-                </h3>
-                <span class="products-card__price">
-                  49 <span class="rouble">₽</span>
-                  <span class="products-card__price--past hidden">
-                    1999 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Морковь молодая с бабушкиной грядки, 1кг
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      49 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past unvisible">
+                      1999 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting hidden"></span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -446,22 +726,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/juice.jpg" alt="Карточка товара" width="300"
+                      <img class="products-card__image" src="images/content/standart/juice.jpg" alt="Карточка товара" width="300"
                         height="225">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный
-                </h3>
-                <span class="products-card__price">
-                  199 <span class="rouble">₽</span>
-                  <span class="products-card__price--past">
-                    299 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольный
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      199 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past">
+                      299 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting hidden"></span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -489,22 +784,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/coffee.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/standart/coffee.jpg" alt="Карточка товара"
                         width="300" height="225">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Кофе с коноплей органический Caffé Salomoni 250г
-                </h3>
-                <span class="products-card__price">
-                  877 <span class="rouble">₽</span>
-                  <span class="products-card__price--past hidden">
-                    299 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Кофе с коноплей органический Caffé Salomoni 250г
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      877 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past unvisible">
+                      299 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting hidden"></span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -532,22 +842,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/paprik.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/standart/paprik.jpg" alt="Карточка товара"
                         width="300" height="225">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Перец оранжевый, 1кг
-                </h3>
-                <span class="products-card__price">
-                  349 <span class="rouble">₽</span>
-                  <span class="products-card__price--past hidden">
-                    299 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Перец оранжевый, 1кг
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      349 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past unvisible">
+                      299 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting hidden"></span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
           </ul>
@@ -560,20 +885,20 @@
       <div class="container">
         <h2 class="sr-only">Баннеры</h2>
         <div class="banners__inner">
-          <div class="banners__item banners__item--light" style="background-image: url(images/content/bg/fruits.jpg);">
+          <div class="banners__item banners__item--light" style="background-image: url(images/content/banners/fruits.jpg);">
             <div class="banners__text">
-              <h3 class="banners__category banners__category--light">
+              <h3 class="banners__category">
                 СВЕЖАЙШИЕ ФРУКТЫ
               </h3>
-              <h4 class="banners__subtitle banners__subtitle--light">
+              <h4 class="banners__subtitle">
                 НАЧНИ ФРУКТОВОЕ ЛЕТО
                 ВСЕГО От 99 ₽
               </h4>
-              <a class="banners__link banners__link--light link" href="#">ПЕРЕЙТИ К ПОКУПКАМ</a>
+              <a class="banners__link link" href="#">ПЕРЕЙТИ К ПОКУПКАМ</a>
             </div>
           </div>
 
-          <div class="banners__item" style="background-image: url(images/content/bg/vegetables.jpg);">
+          <div class="banners__item" style="background-image: url(images/content/banners/vegetables.jpg);">
             <div class="banners__text">
               <h3 class="banners__category">
                 СЕЗОННАЯ РАСПРОДАЖА
@@ -586,7 +911,7 @@
             </div>
           </div>
 
-          <div class="banners__item" style="background-image: url(images/content/bg/bread.jpg);">
+          <div class="banners__item" style="background-image: url(images/content/banners/bread.jpg);">
             <div class="banners__text">
               <h3 class="banners__category">
                 ням-ням
@@ -646,7 +971,7 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/pineapple-small.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/promo/pineapple.jpg" alt="Карточка товара"
                         width="100" height="100">
                     </div>
                   </a>
@@ -655,15 +980,28 @@
                   <h3 class="products-card__title">
                     Ананас, 1 кг
                   </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      999 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past">
+                      1999 <span class="rouble">₽</span>
+                    </span>
+                  </div>
                 </div>
-                <span class="products-card__price">
-                  999 <span class="rouble">₽</span>
-                  <span class="products-card__price--past">
-                    1999 <span class="rouble">₽</span>
-                  </span>
-                </span>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting">4.5</span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -691,22 +1029,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/coffee-small.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/promo/coffee.jpg" alt="Карточка товара"
                         width="100" height="100">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Кофе с коноплей органический Caffé Salomoni 250г
-                </h3>
-                <span class="products-card__price">
-                  777 <span class="rouble">₽</span>
-                  <span class="products-card__price--past">
-                    877 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Кофе с коноплей органический Caffé Salomoni 250г
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      777 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past">
+                      877 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting">4.9</span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -734,22 +1087,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/strawberry-small.jpg"
-                        alt="Карточка товара" width="100" height="100">
+                      <img class="products-card__image" src="images/content/promo/strawberry.jpg" alt="Карточка товара"
+                        width="100" height="100">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Клубника, 1 кг
-                </h3>
-                <span class="products-card__price">
-                  440 <span class="rouble">₽</span>
-                  <span class="products-card__price--past">
-                    600 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Клубника, 1 кг
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      440 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past">
+                      600 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting">5.0</span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -777,22 +1145,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/mango-small.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/promo/mango.jpg" alt="Карточка товара"
                         width="100" height="100">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Манго, 1 шт
-                </h3>
-                <span class="products-card__price">
-                  660 <span class="rouble">₽</span>
-                  <span class="products-card__price--past">
-                    960 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Манго, 1 шт
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      660 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past">
+                      960 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting">5.0</span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -820,22 +1203,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/salmon-small.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/promo/salmon.jpg" alt="Карточка товара"
                         width="100" height="100">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Лосось, 1 кг
-                </h3>
-                <span class="products-card__price">
-                  999 <span class="rouble">₽</span>
-                  <span class="products-card__price--past">
-                    1199 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Лосось, 1 кг
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      999 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past">
+                      1199 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting">4.5</span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -863,22 +1261,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/vegjuice-small.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/promo/vegjuice.jpg" alt="Карточка товара"
                         width="100" height="100">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Сок Granini овощной 100%, 0.5л
-                </h3>
-                <span class="products-card__price">
-                  180 <span class="rouble">₽</span>
-                  <span class="products-card__price--past">
-                    230 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Сок Granini овощной 100%, 0.5л
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      180 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past">
+                      230 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting">4.9</span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -906,22 +1319,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/basket-small.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/promo/basket.jpg" alt="Карточка товара"
                         width="100" height="100">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Фруктовая корзина, 1 шт
-                </h3>
-                <span class="products-card__price">
-                  3990 <span class="rouble">₽</span>
-                  <span class="products-card__price--past">
-                    5990 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Фруктовая корзина, 1 шт
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      3990 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past">
+                      5990 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting">4.8</span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
             <li class="products__item">
@@ -949,22 +1377,37 @@
                             fill="#63A60E" />
                         </svg>
                       </div>
-                      <img class="products-card__image" src="images/content/pork-small.jpg" alt="Карточка товара"
+                      <img class="products-card__image" src="images/content/promo/pork.jpg" alt="Карточка товара"
                         width="100" height="100">
                     </div>
                   </a>
                 </div>
-                <h3 class="products-card__title">
-                  Свинина мякоть, 1 кг
-                </h3>
-                <span class="products-card__price">
-                  499 <span class="rouble">₽</span>
-                  <span class="products-card__price--past">
-                    599 <span class="rouble">₽</span>
-                  </span>
-                </span>
+                <div class="products-card__text">
+                  <h3 class="products-card__title">
+                    Свинина мякоть, 1 кг
+                  </h3>
+                  <div class="products-card__prices">
+                    <span class="products-card__price">
+                      499 <span class="rouble">₽</span>
+                    </span>
+                    <span class="products-card__price--past">
+                      599 <span class="rouble">₽</span>
+                    </span>
+                  </div>
+                </div>
                 <button type="button" class="products-card__cart" aria-label="Корзина"></button>
                 <span class="products__raiting">4.6</span>
+                <div class="shopping-cart__controls hidden">
+                  <button class="button shopping-cart__reduce" type="button" aria-label="Убавить количество"></button>
+                  <span class="shopping-cart__number">
+                    2
+                  </span>
+                  <button class="button shopping-cart__add" type="button" aria-label="Прибавить количество"></button>
+                  <span class="shopping-cart__sum products-card__price">
+                    1998 <span class="rouble">₽</span>
+                  </span>
+                </div>
+                <button class="shopping-cart__remove hidden state-btn" type="button" aria-label="Удалить товар"></button>
               </article>
             </li>
           </ul>
@@ -1024,8 +1467,9 @@
                   </span>
                 </p>
               </div>
-              <a  class="news__link" href="#">
-                Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!
+              <a class="news__link" href="#">
+                Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не
+                разобрали!
               </a>
             </li>
             <li class="news__item">
@@ -1078,7 +1522,7 @@
         </div>
         <div class="footer__nav">
           <form class="notifications" action="#">
-            <span class="notifications__descr" for="email">Следите за нашими акциями</span>
+            <span class="notifications__descr">Следите за нашими акциями</span>
             <div class="notifications__inner">
               <input class="notifications__input input" id="email" type="email" name="email"
                 placeholder="email@email.com" required>
@@ -1218,10 +1662,10 @@
           </div>
           <ul class="partners">
             <li class="partners__item">
-              <img class="partners__img" src="images/content/partners/visa.svg" alt="Партнёр Виза">
+              <img class="partners__img" src="images/partners/visa.svg" alt="Партнёр Виза">
             </li>
             <li class="partners__item">
-              <img class="partners__img" src="images/content/partners/mc.svg" alt="Партнёр Мастер-кард">
+              <img class="partners__img" src="images/partners/mc.svg" alt="Партнёр Мастер-кард">
             </li>
           </ul>
         </div>
