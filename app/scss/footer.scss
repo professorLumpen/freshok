@@ -4,6 +4,7 @@
   background-color: $dark-800;
   color: $white;
   letter-spacing: 0;
+
   &__top {
     padding: 30px 0 14px;
   }
@@ -23,6 +24,7 @@
   &__list {
     display: flex;
     flex-direction: column;
+    min-width: 212px;
   }
 
   &__item {
@@ -89,9 +91,6 @@
     margin: 0;
   }
 
-  &__wrapper {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
 
   &__bottom {
     display: flex;
@@ -121,3 +120,146 @@ ul.footer__list {
 ul.footer__nav-list {
   margin: -3px 0 0 5px;
 }
+
+
+ @media (max-width: 1200px) {
+  .footer__nav-list {
+    max-width: 360px;
+    column-count: 2;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .footer__nav {
+    flex-wrap: wrap;
+  }
+
+  .footer__nav-list {
+    max-width: 320px;
+    column-gap: 45px;
+  }
+
+  .footer .notifications {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .container {
+      padding: 0;
+    }
+    
+    .logotype {
+      margin: 0 0 24px 15px;
+    }
+
+    .notifications {
+      margin-right: 0px;
+      padding: 24px 0 20px;
+      text-align: left;
+    }
+
+    &__bottom {
+      padding: 24px 15px;
+    }
+
+    &__wrapper {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  } 
+
+  .footer__nav {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  ul.footer__list {
+    width: 100%;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 -15px;
+    padding: 0 15px;
+  }
+
+  ul.footer__nav-list {
+    width: 100%;
+    max-width: 350px;
+    padding: 24px 15px;
+    margin: 0 auto;
+    column-gap: 49px;
+  }
+
+  .footer__wrapper {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+  }
+
+
+}
+
+@media (max-width: 576px) {
+
+  .footer .notifications {
+    margin: 0;
+    padding: 23px 0 11px;
+  }
+
+  ul.footer__list {
+    .footer__item--last {
+        max-width: 220px;
+        margin: 0 auto 14px;
+    }
+
+    .footer__item--last:last-child {
+      margin: 0 auto 6px;
+    }
+  }
+
+  .footer__top {
+    padding-top: 105px;
+    position: relative;
+    
+    .logotype {
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-63%);
+    }
+  }
+
+  .footer__bottom {
+    flex-direction: column-reverse;
+    .partners {
+      margin-bottom: 24px;
+    }
+  }
+
+  .footer__link {
+    margin-left: 7.5px;
+  }
+
+  .footer .social {
+    transform: translate(27px, -3px);
+  }
+
+  ul.footer__nav-list {
+    padding: 20px 46px 17px;
+    column-gap: 99px;
+  }
+
+  .footer__item {
+    min-width: 136px;
+  }
+
+  .footer {
+    .form-btn {
+      width: 116px;
+      padding: 12px 7px;
+     }
+    
+  }
+
+}
+

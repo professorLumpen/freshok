@@ -14,6 +14,8 @@ body {
 
   display: flex;
   flex-direction: column;
+
+  overflow-x: hidden;
 }
 
 .main {
@@ -28,7 +30,7 @@ body {
   opacity: 0;
 }
 
-.body-hidden {
+.overlay {
   overflow: hidden;
 
   &::after {
@@ -39,7 +41,7 @@ body {
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.25);
-    z-index: 3;
+    z-index: 7;
   }
 }
 
@@ -215,10 +217,151 @@ body {
     }
 
     &:active {
-      & path {
+      & svg {
         fill: $green-200;
       }
     }
 
+  }
+}
+
+
+.logotype {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+
+  &__link {
+    outline: none;
+     &:focus {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      box-shadow: inset 0px 0px 0px 3px $green-100;
+    }
+  }
+
+  &--home {
+    .main-title {
+      color: $green-800;
+    }
+  }
+}
+
+.logo {
+  min-width: 55px;
+  
+  transition: background-color 0.5s, 
+              opacity 0.5s;
+              
+  &:hover,
+  &:focus, 
+  &:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+
+  &:focus {
+    box-shadow: inset 0px 0px 0px 3px $green-100;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &--title {
+    margin-right: 13px;
+  }
+}
+
+
+.main-title {
+  position: relative;
+
+  max-width: 128px;
+
+  @extend %ruda-600;
+  text-align: center;
+  text-transform: uppercase;
+
+  font-size: 28px;
+  line-height: 1.2;
+  color: $white;
+  margin-bottom: 19px;
+  letter-spacing: 0;
+}
+
+.main-subtitle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 34px;
+
+  font-size: 12px;
+}
+
+.close-window {
+  position: absolute;
+  right: 26px;
+  top: 33px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-image: url(../images/icons/cross-cart.svg);
+  background-size: cover;
+}
+
+
+
+@media (max-width: 1200px) {
+
+
+  .title {
+    font-size: 30px;
+  }
+
+  .section {
+    padding: 61px 0;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .title {
+    font-size: 28px;
+  }
+
+  .section {
+    padding: 51px 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .title {
+    font-size: 26px;
+  }
+
+  .section {
+    padding: 41px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .button {
+    padding: 11px 23px 11px 26px;
+    transform: translate(3px, 0px);
+
+    &--white {
+      padding: 11px 23px;
+      transform: translate(5px, -1px);
+    }
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .section {
+    padding: 31px 0;
   }
 }

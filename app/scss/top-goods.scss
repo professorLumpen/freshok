@@ -13,3 +13,15 @@
 }
 
 @import 'products';
+
+
+
+@media (max-width: 576px) {
+  .top-goods {
+    padding: 48px 0 46px;
+
+    &__title {
+      margin-bottom: 21px;
+    }  
+  }
+}

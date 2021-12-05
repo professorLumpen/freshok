@@ -41,7 +41,7 @@
   }
 
   &__text {
-    max-width: 70%;
+    max-width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,7 +60,10 @@
     font-size: 30px;
     margin-bottom: 12px;
     letter-spacing: 0;
-
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__link {
@@ -72,5 +75,131 @@
     padding-bottom: 6px;
     max-width: max-content;
     letter-spacing: 0;
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+  .banners {
+    padding-bottom: 55px;
+    margin-top: 0;
+
+    &__inner {
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-gap: 25px;
+    }
+
+    &__item {
+      padding-left: 22px;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+
+    &__category {
+      margin-bottom: 17px;
+    }
+
+    &__subtitle {
+      font-size: 28px;
+      max-width: 80%;
+    }
+
+  }
+}
+
+@media (max-width: 992px) {
+  .banners {
+    padding-bottom: 43px;
+    margin-top: 0;
+
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    &__category {
+      margin-bottom: 16px;
+    }
+
+    &__subtitle {
+      font-size: 26px;
+      max-width: 70%;
+    }
+
+    // &__item {
+    //   &--light {
+    //     .banners__subtitle {
+    //       max-width: 80%;
+    //     }
+    //   }
+    // }
+  }
+}
+
+@media (max-width: 768px) {
+  .banners {
+    padding-bottom: 33px;
+    
+    &__category {
+      margin-bottom: 16px;
+    }
+
+    &__subtitle {
+      font-size: 25px;
+      margin-bottom: 77px;
+      max-width: 90%;
+    }
+
+    &__item {
+      position: relative;
+    }
+
+    &__link {
+      position: absolute;
+      bottom: 31px;
+    }
+  }
+
+}
+
+@media (max-width: 576px) {
+  .banners {
+    padding-bottom: 47px;
+
+     &__inner {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
+
+    &__category {
+      margin-bottom: 15px;
+    }
+
+    &__subtitle {
+      font-size: 24px;
+      margin-bottom: 77px;
+      max-width: 48%;
+    }
+
+    .banners__item {
+      padding-left: 15px;
+      padding-top: 24px;
+      background-position: left center;
+    }
+
+    &__item--light {
+      .banners__subtitle {
+        max-width: 80%;
+      }
+    }
+
+    &__link {
+      position: absolute;
+      bottom: 30px;
+      left: 14px;
+    }
   }
 }

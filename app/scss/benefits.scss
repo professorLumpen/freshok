@@ -53,3 +53,50 @@
     letter-spacing: 0;
   }
 }
+
+
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+  .benefits {
+
+    &__list {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      margin-bottom: 6px;
+    }
+
+    &__item {
+      margin-bottom: 32px;
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .benefits {
+    padding: 31px 0 0;
+
+    &__item {
+      max-width: 300px;
+    }
+
+    &__list {
+      align-items: flex-start;
+    }
+  }
+
+}

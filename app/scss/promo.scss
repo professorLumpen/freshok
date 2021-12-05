@@ -10,3 +10,23 @@
     margin-bottom: 29px;
   }
 }
+
+
+
+
+@media (max-width: 576px) {
+  .promo {
+    padding: 50px 0;
+    &__title {
+      margin-bottom: 22px;
+    }
+
+    .products-controls {
+      margin-bottom: 13px;
+      .products-controls__btn:not(:last-child) {
+        margin-right: 23px;
+      }
+    }
+  }
+}
+  
