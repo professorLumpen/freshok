@@ -619,7 +619,7 @@ ul.home__menu {
 
   &__list {
     overflow-y: scroll;
-    height: 100%;
+    height: calc(100% - 246px);
   }
 
   &__item {
@@ -850,6 +850,14 @@ ul.shopping-cart__list {
     &--cart::after {
       height: 23px;
       width: 24px;
+    }
+  }
+
+  .shopping-cart {
+    top: 111px;
+    height: calc(100vh - 111px);
+    .shopping-cart__list {
+      height: calc(100% - 200px);
     }
   }
 }

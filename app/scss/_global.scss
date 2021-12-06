@@ -364,4 +364,12 @@ body {
   .section {
     padding: 31px 0;
   }
+
+  .overlay {
+    overflow: visible;
+
+  &::after {
+    background-color: transparent;
+    }
+  }
 }
